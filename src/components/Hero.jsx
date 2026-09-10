@@ -14,7 +14,7 @@ export default function Hero({ onFilterCategory }) {
   };
 
   return (
-    <section id="hero" className="relative min-h-[82vh] text-white flex flex-col justify-between pt-16 pb-14 overflow-hidden">
+    <section id="hero" className="relative min-h-[calc(100vh-4.75rem)] min-h-[calc(100dvh-4.75rem)] text-white flex flex-col justify-center py-10 sm:py-14 overflow-hidden">
       
       {/* High-Resolution Panoramic Background Image with Cinematic Dark Gradient */}
       <div className="absolute inset-0 z-0">
