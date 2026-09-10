@@ -29,7 +29,7 @@ export default function Hero({ onOpenBookingModal, onOpenAppointmentModal, onFil
       {/* High-Resolution Panoramic Background Image with Clean Cinematic Dark Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero-bg.jpg"
+          src={`${import.meta.env.BASE_URL}hero-bg.jpg`}
           alt="Masjid Al-Haram Makkah and Holy Kaaba"
           className="w-full h-full object-cover object-center"
         />
