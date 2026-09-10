@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import BrandLogo from './BrandLogo';
+import BrandLogo, { IataBadge } from './BrandLogo';
 import { 
   Calendar, 
   Menu, 
@@ -64,6 +64,11 @@ export default function Navbar({
 
         {/* Right CTAs */}
         <div className="hidden md:flex items-center gap-3">
+          {/* Official IATA Accreditation Badge */}
+          <div className="hidden xl:block">
+            <IataBadge theme="dark" compact={true} />
+          </div>
+
           {/* Subtle My Passes Icon Badge */}
           {bookedCount > 0 && (
             <button
