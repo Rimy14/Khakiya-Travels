@@ -34,49 +34,48 @@ export default function Footer({ onOpenAppointmentModal }) {
   ];
 
   return (
-    <footer className="bg-[#051326] text-slate-300 border-t border-blue-950 pt-16 pb-8">
+    <footer className="bg-white text-slate-700 border-t border-slate-200 pt-16 pb-10">
       <div className="max-w-6xl mx-auto px-4 sm:px-8">
         
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-blue-900/50">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-200">
           
           {/* Col 1: Brand & Letterhead Identity (4 cols) */}
-          <div className="lg:col-span-4 space-y-4">
-            <BrandLogo theme="dark" size="normal" />
-            <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
+          <div className="lg:col-span-5 space-y-4">
+            <BrandLogo theme="light" size="normal" />
+            
+            <p className="text-xs text-slate-500 max-w-sm leading-relaxed">
               Khakiya Travels & Tours (Pvt) Ltd is Sri Lanka’s premier IATA accredited agency dedicated exclusively to providing serene, spiritually uplifting, and meticulously managed Hajj & Umrah pilgrimages.
             </p>
 
-            {/* Official IATA Accreditation Mark Card */}
-            <div className="pt-2 flex flex-wrap items-center gap-3">
-              <div className="bg-white rounded-xl px-3 py-1.5 border border-slate-200 shadow-md inline-flex items-center hover:shadow-lg transition-all">
-                <img 
-                  src={`${import.meta.env.BASE_URL}iata-logo.png`} 
-                  alt="IATA Accredited Agent - Khakiya Travels (Pvt) Ltd" 
-                  className="h-8 sm:h-9 w-auto object-contain"
-                />
-              </div>
+            {/* Official Accreditation Badges - Seamless on White */}
+            <div className="pt-2 flex flex-wrap items-center gap-4">
+              <img 
+                src={`${import.meta.env.BASE_URL}iata-logo.png`} 
+                alt="IATA Accredited Agent - Khakiya Travels" 
+                className="h-10 w-auto object-contain transition-transform hover:scale-105"
+              />
 
-              <div className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-blue-900/40 border border-blue-500/30 text-blue-200 text-xs font-semibold">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Nusuk Verified</span>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold shadow-sm">
+                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                <span>Nusuk Registered</span>
               </div>
             </div>
           </div>
 
-          {/* Col 2: Hajj & Umrah Services (4 cols) */}
-          <div className="lg:col-span-4 space-y-3">
-            <h4 className="text-xs font-extrabold text-white uppercase tracking-wider">
-              Hajj & Umrah Services
+          {/* Col 2: Hajj & Umrah Services (3 cols) */}
+          <div className="lg:col-span-3 space-y-3">
+            <h4 className="text-xs font-extrabold text-[#0B2545] uppercase tracking-wider">
+              Pilgrimage Services
             </h4>
             <ul className="space-y-2 text-xs">
               {pilgrimageServices.map((item, i) => (
                 <li key={i}>
                   <a
                     href={item.href}
-                    className="hover:text-blue-300 transition-colors flex items-center gap-1.5 text-slate-300"
+                    className="hover:text-blue-600 transition-colors flex items-center gap-1.5 text-slate-600 font-medium"
                   >
-                    <ChevronRight className="w-3 h-3 text-blue-500 shrink-0" />
+                    <ChevronRight className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>{item.label}</span>
                   </a>
                 </li>
@@ -86,33 +85,33 @@ export default function Footer({ onOpenAppointmentModal }) {
 
           {/* Col 3: Colombo Head Office & Inquiries (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <h4 className="text-xs font-extrabold text-white uppercase tracking-wider">
+            <h4 className="text-xs font-extrabold text-[#0B2545] uppercase tracking-wider">
               Colombo Head Office
             </h4>
             
-            <div className="space-y-2.5 text-xs text-slate-400">
+            <div className="space-y-2.5 text-xs text-slate-600">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                 <span>60B, Green Lane, Kotahena, Colombo - 13, Sri Lanka</span>
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
-                <div className="text-slate-300 font-semibold">
-                  <a href="tel:0112448155" className="hover:text-blue-300">0112448155</a> / <a href="tel:0112448156" className="hover:text-blue-300">0112448156</a>
+                <Phone className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                <div className="text-slate-800 font-bold">
+                  <a href="tel:0112448155" className="hover:text-blue-600">0112448155</a> / <a href="tel:0112448156" className="hover:text-blue-600">0112448156</a>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
-                <a href="mailto:info@khakiya.com" className="text-blue-300 hover:underline">info@khakiya.com</a>
+                <Mail className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                <a href="mailto:info@khakiya.com" className="text-blue-600 font-semibold hover:underline">info@khakiya.com</a>
               </div>
             </div>
 
             <div className="pt-2">
               <button
                 onClick={onOpenAppointmentModal}
-                className="w-full py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition-all flex items-center justify-center gap-2 shadow-md"
+                className="w-full py-2.5 px-4 rounded-xl bg-[#0B2545] hover:bg-blue-800 text-white font-bold text-xs transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
               >
                 <Calendar className="w-4 h-4 text-amber-300" />
                 <span>Book Office Appointment</span>
@@ -123,7 +122,7 @@ export default function Footer({ onOpenAppointmentModal }) {
         </div>
 
         {/* Bottom Strip */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 font-medium">
           <div className="text-center sm:text-left">
             <span>© {new Date().getFullYear()} Khakiya Travels & Tours (Pvt) Ltd. All Rights Reserved.</span>
           </div>
@@ -131,7 +130,7 @@ export default function Footer({ onOpenAppointmentModal }) {
           <div className="flex items-center gap-3 text-[11px]">
             <span>60B, Green Lane, Kotahena, Colombo 13</span>
             <span>•</span>
-            <span className="text-blue-400">IATA Accredited</span>
+            <span className="text-blue-600 font-bold">IATA Accredited #07302901</span>
           </div>
         </div>
 
