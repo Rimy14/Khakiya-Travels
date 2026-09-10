@@ -1,23 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-  <defs>
-    <linearGradient id="blueWingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0284C7" />
-      <stop offset="100%" stop-color="#1D4ED8" />
-    </linearGradient>
-    <linearGradient id="whiteWingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="100%" stop-color="#E2E8F0" />
-    </linearGradient>
-  </defs>
-  <!-- Flying Dove Emblem representing Khakiya -->
-  <g transform="translate(10, 8) scale(0.8)">
-    <!-- Main Bird Head & Upper Wing -->
-    <path d="M12 35 C14 26 24 16 38 12 C44 10 52 9 60 12 C61 14 57 18 50 20 C38 23 28 29 20 38 C16 43 14 47 12 52 C10 45 11 39 12 35 Z" fill="currentColor" />
-    <!-- Feather Tier 1 -->
-    <path d="M14 53 C18 43 28 32 46 25 C58 20 68 20 78 22 C80 24 74 29 64 32 C48 37 36 46 26 59 C21 66 18 72 16 79 C14 70 13 60 14 53 Z" fill="currentColor" opacity="0.95" />
-    <!-- Feather Tier 2 -->
-    <path d="M17 78 C22 66 34 54 54 46 C67 41 78 42 88 45 C90 47 84 52 72 55 C54 60 41 72 32 87 C28 93 25 97 22 101 C20 93 18 84 17 78 Z" fill="currentColor" opacity="0.9" />
-    <!-- Lower Tail Feathers -->
-    <path d="M21 95 C27 86 38 76 58 72 C68 70 76 72 82 75 C83 77 77 81 68 83 C52 87 42 96 36 108 C31 117 28 120 26 120 C24 112 23 102 21 95 Z" fill="currentColor" opacity="0.8" />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+  <!-- Official Khakiya Flying Dove Emblem (Extracted from Brand Vector) -->
+  <!-- Dove Head and Beak -->
+  <path d="M 22 64 C 18 56 12 46 2 38 C 7 35 13 36 19 41 C 23 45 25 53 26 64 Z" />
+  
+  <!-- Wing 1 (Top sweeping wing) -->
+  <path d="M 27 61 C 32 44 48 24 96 10 C 78 28 52 48 28 62 Z" />
+  
+  <!-- Wing 2 (Middle sweeping wing) -->
+  <path d="M 27 64 C 36 51 54 36 90 26 C 72 42 48 58 27 65 Z" />
+  
+  <!-- Wing 3 (Lower sweeping wing) -->
+  <path d="M 27 67 C 38 58 56 47 84 44 C 68 57 46 68 27 68 Z" />
+  
+  <!-- Tail Feather 1 (Left downward curve) -->
+  <path d="M 25 71 C 20 78 18 86 18 94 C 24 96 28 90 31 81 C 32 78 30 73 25 71 Z" />
+  
+  <!-- Tail Feather 2 (Bottom sweeping tail) -->
+  <path d="M 27 71 C 28 80 34 90 46 92 C 44 84 38 76 28 71 Z" />
 </svg>
