@@ -44,9 +44,12 @@ export default function BrandLogo({ theme = 'dark', size = 'normal' }) {
     ? `${import.meta.env.BASE_URL}khakiya-logo-white.png` 
     : `${import.meta.env.BASE_URL}khakiya-logo-blue.png`;
 
-  const sizeClasses = size === 'large' 
-    ? 'h-11 sm:h-13 w-auto' 
-    : 'h-8 sm:h-9 w-auto';
+  let sizeClasses = 'h-10 sm:h-12 w-auto';
+  if (size === 'large') {
+    sizeClasses = 'h-14 sm:h-16 w-auto';
+  } else if (size === 'small') {
+    sizeClasses = 'h-8 sm:h-9 w-auto';
+  }
 
   return (
     <div className="flex items-center select-none group">
