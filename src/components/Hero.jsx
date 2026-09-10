@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import { 
-  Sparkles, 
-  Calendar, 
-  ArrowRight, 
   Search,
-  CheckCircle2, 
-  Award,
-  ShieldCheck,
-  Plane,
-  Building2
+  Award
 } from 'lucide-react';
 
 export default function Hero({ onOpenBookingModal, onOpenAppointmentModal, onFilterCategory }) {
@@ -59,30 +52,10 @@ export default function Hero({ onOpenBookingModal, onOpenAppointmentModal, onFil
           <p className="text-slate-200 text-sm sm:text-base max-w-xl mx-auto font-normal leading-relaxed">
             Experience spiritually uplifting Hajj & Umrah pilgrimages with 5-star Haram frontage accommodations, scholar guidance, and personalized care.
           </p>
-
-          {/* Clean Primary Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-3">
-            <button
-              onClick={() => onOpenBookingModal()}
-              className="px-7 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm tracking-wide shadow-lg shadow-blue-600/30 transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
-            >
-              <Sparkles className="w-4 h-4 text-amber-300" />
-              <span>Customize Pilgrimage</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-
-            <button
-              onClick={onOpenAppointmentModal}
-              className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs sm:text-sm border border-white/20 backdrop-blur-md transition-all hover:scale-105 flex items-center gap-2"
-            >
-              <Calendar className="w-4 h-4 text-slate-300" />
-              <span>Book Appointment</span>
-            </button>
-          </div>
         </div>
 
         {/* Clean, Streamlined Quick Search Bar */}
-        <div className="mt-12 max-w-3xl mx-auto">
+        <div className="mt-8 sm:mt-10 max-w-3xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl p-3 sm:p-4 border border-slate-200 text-slate-800">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center">
               
