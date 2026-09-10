@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import { 
-  Search,
-  Award
-} from 'lucide-react';
+import { Search } from 'lucide-react';
 
-export default function Hero({ onOpenBookingModal, onOpenAppointmentModal, onFilterCategory }) {
+export default function Hero({ onFilterCategory }) {
   const [selectedJourneyType, setSelectedJourneyType] = useState('umrah');
   const [selectedSeason, setSelectedSeason] = useState('October - December 2026');
 
@@ -17,84 +14,76 @@ export default function Hero({ onOpenBookingModal, onOpenAppointmentModal, onFil
   };
 
   return (
-    <section id="hero" className="relative min-h-[85vh] text-white flex flex-col justify-between pt-12 pb-16 overflow-hidden">
+    <section id="hero" className="relative min-h-[82vh] text-white flex flex-col justify-between pt-16 pb-14 overflow-hidden">
       
-      {/* High-Resolution Panoramic Background Image with Clean Cinematic Dark Gradient Overlay */}
+      {/* High-Resolution Panoramic Background Image with Cinematic Dark Gradient */}
       <div className="absolute inset-0 z-0">
         <img
           src={`${import.meta.env.BASE_URL}hero-bg.jpg`}
           alt="Masjid Al-Haram Makkah and Holy Kaaba"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000"
         />
-        {/* Soft luxury dark blue gradient overlay to ensure perfect contrast and clean readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#06152b]/90 via-[#0B2545]/75 to-[#071e3d]/95"></div>
+        {/* Luxury dark blue gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#06152b]/90 via-[#0B2545]/70 to-[#071e3d]/95"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 w-full z-10 relative my-auto">
+      <div className="max-w-5xl mx-auto px-4 sm:px-8 w-full z-10 relative my-auto">
         
-        {/* Sleek Top Pill */}
-        <div className="text-center mb-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-200 text-xs font-semibold tracking-wide">
-            <Award className="w-3.5 h-3.5 text-amber-300" />
-            <span>IATA Accredited Agent • Sri Lanka’s Premier Hajj & Umrah Organizer</span>
-          </div>
-        </div>
-
         {/* Hero Title & Subtitle */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+        <div className="text-center max-w-2xl mx-auto space-y-4">
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
             Sacred Journeys, <br />
             <span className="text-blue-200 font-light italic font-serif">
               Unmatched Comfort
             </span>
           </h1>
           
-          <p className="text-slate-200 text-sm sm:text-base max-w-xl mx-auto font-normal leading-relaxed">
-            Experience spiritually uplifting Hajj & Umrah pilgrimages with 5-star Haram frontage accommodations, scholar guidance, and personalized care.
+          <p className="text-slate-200 text-sm sm:text-base max-w-lg mx-auto font-normal leading-relaxed opacity-90">
+            Dedicated Hajj & Umrah pilgrimages with 5-star Haram accommodations, scholar guidance, and personalized care.
           </p>
         </div>
 
-        {/* Clean, Streamlined Quick Search Bar */}
-        <div className="mt-8 sm:mt-10 max-w-3xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl p-3 sm:p-4 border border-slate-200 text-slate-800">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center">
+        {/* Ultra-Clean Modern Floating Search Pill */}
+        <div className="mt-10 sm:mt-12 max-w-2xl mx-auto">
+          <div className="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-full p-2 sm:p-2.5 shadow-2xl border border-white/50 text-slate-800">
+            <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 items-center">
               
               {/* Journey Type */}
-              <div className="px-3 py-1.5 border-b sm:border-b-0 sm:border-r border-slate-200">
+              <div className="sm:col-span-5 px-4 py-2 sm:py-1 border-b sm:border-b-0 sm:border-r border-slate-200">
                 <label className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Journey</label>
                 <select 
                   value={selectedJourneyType}
                   onChange={(e) => setSelectedJourneyType(e.target.value)}
-                  className="w-full bg-transparent font-bold text-xs sm:text-sm text-slate-800 focus:outline-none cursor-pointer"
+                  className="w-full bg-transparent font-bold text-xs sm:text-sm text-slate-900 focus:outline-none cursor-pointer"
                 >
-                  <option value="umrah">Umrah 2026/2027 Packages</option>
-                  <option value="hajj">Hajj 2026 / 2027 Quota</option>
+                  <option value="umrah">Umrah 2026/2027</option>
+                  <option value="hajj">Hajj 2026/2027</option>
                 </select>
               </div>
 
               {/* Season */}
-              <div className="px-3 py-1.5 border-b sm:border-b-0 sm:border-r border-slate-200">
+              <div className="sm:col-span-4 px-4 py-2 sm:py-1 border-b sm:border-b-0 sm:border-r border-slate-200">
                 <label className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Season</label>
                 <select 
                   value={selectedSeason}
                   onChange={(e) => setSelectedSeason(e.target.value)}
-                  className="w-full bg-transparent font-bold text-xs sm:text-sm text-slate-800 focus:outline-none cursor-pointer"
+                  className="w-full bg-transparent font-bold text-xs sm:text-sm text-slate-900 focus:outline-none cursor-pointer"
                 >
-                  <option>October - December 2026</option>
-                  <option>January - February 2027</option>
-                  <option>Ramadan 2027 Season</option>
-                  <option>Hajj 2027 Season</option>
+                  <option>Oct – Dec 2026</option>
+                  <option>Jan – Feb 2027</option>
+                  <option>Ramadan 2027</option>
+                  <option>Hajj 2027</option>
                 </select>
               </div>
 
               {/* Action Button */}
-              <div>
+              <div className="sm:col-span-3">
                 <button
                   onClick={handleQuickSearch}
-                  className="w-full py-2.5 px-4 rounded-xl bg-[#0B2545] hover:bg-blue-800 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-md"
+                  className="w-full py-2.5 sm:py-3 px-4 rounded-xl sm:rounded-full bg-[#0B2545] hover:bg-blue-800 text-white font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
                 >
-                  <Search className="w-4 h-4 text-blue-300" />
-                  <span>Search Packages</span>
+                  <Search className="w-3.5 h-3.5 text-blue-300" />
+                  <span>Search</span>
                 </button>
               </div>
 
@@ -102,27 +91,15 @@ export default function Hero({ onOpenBookingModal, onOpenAppointmentModal, onFil
           </div>
         </div>
 
-        {/* Minimal Clean Stats Strip */}
-        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-12 mt-10 text-xs text-slate-300">
-          <div className="flex items-center gap-2">
-            <span className="font-extrabold text-white text-base">20+</span>
-            <span>Years of Trust</span>
-          </div>
-          <span className="text-slate-600 hidden sm:inline">•</span>
-          <div className="flex items-center gap-2">
-            <span className="font-extrabold text-white text-base">50,000+</span>
-            <span>Pilgrims Guided</span>
-          </div>
-          <span className="text-slate-600 hidden sm:inline">•</span>
-          <div className="flex items-center gap-2">
-            <span className="font-extrabold text-white text-base">100%</span>
-            <span>IATA Accredited</span>
-          </div>
-          <span className="text-slate-600 hidden sm:inline">•</span>
-          <div className="flex items-center gap-2">
-            <span className="font-extrabold text-white text-base">24/7</span>
-            <span>Ground Care</span>
-          </div>
+        {/* Subtle Minimalist Trust Strip */}
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 mt-12 text-xs text-slate-300 font-medium">
+          <div><strong className="text-white font-bold text-sm">20+</strong> Years Experience</div>
+          <span className="text-slate-500 hidden sm:inline">•</span>
+          <div><strong className="text-white font-bold text-sm">50k+</strong> Pilgrims Guided</div>
+          <span className="text-slate-500 hidden sm:inline">•</span>
+          <div><strong className="text-white font-bold text-sm">IATA</strong> Accredited</div>
+          <span className="text-slate-500 hidden sm:inline">•</span>
+          <div><strong className="text-white font-bold text-sm">24/7</strong> Ground Support</div>
         </div>
 
       </div>
