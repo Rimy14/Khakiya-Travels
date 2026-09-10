@@ -40,23 +40,23 @@ export default function Footer({ onOpenAppointmentModal }) {
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-200">
           
-          {/* Col 1: Brand & Letterhead Identity (4 cols) */}
+          {/* Col 1: Brand & Letterhead Identity (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <BrandLogo theme="light" size="normal" />
+            <BrandLogo theme="light" size="large" />
             
-            <p className="text-xs text-slate-500 max-w-sm leading-relaxed">
+            <p className="text-xs text-slate-500 max-w-sm leading-relaxed pt-1">
               Khakiya Travels & Tours (Pvt) Ltd is Sri Lanka’s premier IATA accredited agency dedicated exclusively to providing serene, spiritually uplifting, and meticulously managed Hajj & Umrah pilgrimages.
             </p>
 
             {/* Official Accreditation Badges - Seamless on White */}
-            <div className="pt-2 flex flex-wrap items-center gap-4">
+            <div className="pt-3 flex flex-wrap items-center gap-5">
               <img 
                 src={`${import.meta.env.BASE_URL}iata-logo.png`} 
                 alt="IATA Accredited Agent - Khakiya Travels" 
-                className="h-10 w-auto object-contain transition-transform hover:scale-105"
+                className="h-12 sm:h-14 w-auto object-contain transition-transform hover:scale-105"
               />
 
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold shadow-sm">
+              <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold shadow-sm">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
                 <span>Nusuk Registered</span>
               </div>
