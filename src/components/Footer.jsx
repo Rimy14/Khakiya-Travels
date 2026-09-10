@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BrandLogo, { IataBadge } from './BrandLogo';
+import BrandLogo from './BrandLogo';
 import { 
   Phone, 
   Mail, 
@@ -40,18 +40,26 @@ export default function Footer({ onOpenAppointmentModal }) {
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-blue-900/50">
           
-          {/* Col 1: Brand & Letterhead Identity (5 cols) */}
+          {/* Col 1: Brand & Letterhead Identity (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <BrandLogo theme="dark" size="normal" />
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
               Khakiya Travels & Tours (Pvt) Ltd is Sri Lanka’s premier IATA accredited agency dedicated exclusively to providing serene, spiritually uplifting, and meticulously managed Hajj & Umrah pilgrimages.
             </p>
 
-            <div className="flex flex-wrap items-center gap-2.5 pt-2">
-              <IataBadge theme="dark" />
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-900/40 border border-blue-500/30 text-blue-200 text-[11px] font-semibold">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Nusuk Registered</span>
+            {/* Official IATA Accreditation Mark Card */}
+            <div className="pt-2 flex flex-wrap items-center gap-3">
+              <div className="bg-white rounded-xl px-3 py-1.5 border border-slate-200 shadow-md inline-flex items-center hover:shadow-lg transition-all">
+                <img 
+                  src={`${import.meta.env.BASE_URL}iata-logo.png`} 
+                  alt="IATA Accredited Agent - Khakiya Travels (Pvt) Ltd" 
+                  className="h-8 sm:h-9 w-auto object-contain"
+                />
+              </div>
+
+              <div className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-blue-900/40 border border-blue-500/30 text-blue-200 text-xs font-semibold">
+                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                <span>Nusuk Verified</span>
               </div>
             </div>
           </div>
